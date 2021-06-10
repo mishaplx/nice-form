@@ -1,0 +1,70 @@
+@import url(../css/nullstyle.css);
+body {
+    background: rgb(78, 78, 78);
+}
+
+.login-box {
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    color: white;
+    h1 {
+        font-size: 40px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 6px solid rgb(41, 173, 85);
+        margin-bottom: 30px;
+        padding: 10px 0px;
+    }
+}
+.form__textbox {
+    width: 100%;
+
+    .textbox {
+        margin-bottom: 20px;
+        width: 100%;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        overflow: hidden;
+        font-size: 20px;
+        padding: 5px 0px;
+        margin: 5px 0px;
+        border-bottom: 2px solid rgb(41, 173, 85);
+        input {
+            width: inherit;
+            outline: none;
+            border: none;
+            background: none;
+            color: white;
+            font-size: 18px;
+        }
+    }
+    .btn {
+        border: 1px solid rgb(41, 173, 85);
+        background: none;
+        color: white;
+        font-size: 30px;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            background: rgb(105, 180, 130);
+            color: black;
+            font-size: 35px;
+        }
+    }
+}
+.inp::placeholder {
+    color: white;
+    font-size: 18px;
+}
+.result {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+}

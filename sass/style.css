@@ -1,0 +1,94 @@
+@import url(../css/nullstyle.css);
+body {
+  background: #4e4e4e;
+}
+
+.login-box {
+  width: 300px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  color: white;
+}
+
+.login-box h1 {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 6px solid #29ad55;
+  margin-bottom: 30px;
+  padding: 10px 0px;
+}
+
+.form__textbox {
+  width: 100%;
+}
+
+.form__textbox .textbox {
+  margin-bottom: 20px;
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 5px 0px;
+  margin: 5px 0px;
+  border-bottom: 2px solid #29ad55;
+}
+
+.form__textbox .textbox:last-child {
+  margin-bottom: 0px;
+}
+
+.form__textbox .textbox input {
+  width: inherit;
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+}
+
+.form__textbox .btn {
+  border: 1px solid #29ad55;
+  background: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.form__textbox .btn:hover {
+  background: #69b482;
+  color: black;
+  font-size: 35px;
+}
+
+.inp::-webkit-input-placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+.inp:-ms-input-placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+.inp::-ms-input-placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+.inp::placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+.result {
+  border: 1px solid white;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+}
+/*# sourceMappingURL=style.css.map */
