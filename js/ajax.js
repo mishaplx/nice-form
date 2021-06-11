@@ -9,14 +9,15 @@ $(document).ready(function () {
 
 function sendAjaxForm(_result_form, ajax_form, url) {
     $.ajax({
-        url: url, 
-        type: "POST", 
+        url: url,
+        type: "POST",
         dataType: "html",
-        data: $("#" + ajax_form).serialize(), 
-        success: function (response) { 
+        data: $("#" + ajax_form).serialize(),
+        success: function (response) {
             result = jQuery.parseJSON(response);
-            $('#result_form').html('Ваше Имя: ' + result.name + '<br>Ваша Фамилия: ' + result.surname + '<br>Ваш Email: ' + result.email + '<br>Ваш телефон: ' + result.phone);
-            $('#response').html("Ваши данные отправленны");
+            $('#result_form').html('Проверьте данные <br> Ваше Имя: ' + result.name + '<br>Ваша Фамилия: ' + result.surname + '<br>Ваш Email: ' + result.email + '<br>Ваш телефон: ' + result.phone + '<br>тип файла: ' + result.typefile);
+            $('#response').html('Ваши данные хранятся <br>  в файле feedbackform.'+ result.typefile);
         }
     });
 }
+

@@ -1,6 +1,7 @@
 @import url(../css/nullstyle.css);
 body {
   background: #4e4e4e;
+  font-family: Montserrat;
 }
 
 .login-box {
@@ -90,5 +91,11 @@ body {
   color: white;
   font-size: 20px;
   display: inline-block;
+}
+
+#response {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
 }
 /*# sourceMappingURL=style.css.map */

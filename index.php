@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./sass/style.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <title>feedback form</title>
 </head>
 
@@ -27,16 +28,22 @@
             <div class="textbox">
                 <input type="text" name="phone" class="inp" placeholder="+375(XX)-XXX-XX-XX">
             </div>
+            <div class="textbox">
+                <input type="text" name="typefile" class="inp" placeholder="тип файла">
+            </div>
             <input type="button" name="" class="btn" id="btn" value="Отправить">
         </form>
     </div>
     <div class="result">
         <div id="result_form"></div>
-        <div id="response"></div>
     </div>
+  
+    <div id="response"></div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <script src="./js/ajax.js"></script>
+
 </body>
 
 </html>
