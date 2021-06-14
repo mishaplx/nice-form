@@ -16,10 +16,10 @@ if (isset($_POST["name"]) && isset($_POST["surname"]) && isset($_POST["email"]) 
 
 $name_file = "{$_SERVER['DOCUMENT_ROOT']}/form_upload/feedbackform.{$result['typefile']}";
     $file = fopen($name_file,'w');
-    fwrite($file,$result['name']);
-    fwrite($file,$result['surname']);
-    fwrite($file,$result['email']);
-    fwrite($file,$result['phone']);
+    fwrite($file,$result['name'] . "\n");
+    fwrite($file,$result['surname'] . "\n");
+    fwrite($file,$result['email'] . "\n");
+    fwrite($file,$result['phone'] . "\n");
     fclose($file);
     echo json_encode($result);
 }
