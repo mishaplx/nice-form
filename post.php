@@ -16,5 +16,4 @@ $name_file = "{$_SERVER['DOCUMENT_ROOT']}/form_upload/feedbackform.{$_POST["type
     fwrite($file,"Номер телефона - " . $_POST["phone"]. "\n");
     fwrite($file,"Тип файла в котором будут записанны данные из формы - " . $_POST["typefile"]. "\n");
     fclose($file);
-
-
+?>
