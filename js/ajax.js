@@ -1,23 +1,19 @@
-$(document).ready(function () {
-    $("#btn").click(
-        function () {
-            sendAjaxForm('result_form', 'ajax_form', 'post.php');
-            return false;
-        }
-    );
-});
+$("#upload_form").submit(function (e) {
+    e.preventDefault();
+    var formData = new FormData($(this)[0]);
 
-function sendAjaxForm(_result_form, ajax_form, url) {
     $.ajax({
-        url: url,
         type: "POST",
-        dataType: "html",
-        data: $("#" + ajax_form).serialize(),
-        success: function (response) {
-            result = jQuery.parseJSON(response);
-            $('#result_form').html('Проверьте данные <br> Ваше Имя: ' + result.name + '<br>Ваша Фамилия: ' + result.surname + '<br>Ваш Email: ' + result.email + '<br>Ваш телефон: ' + result.phone + '<br>тип файла: ' + result.typefile);
-            $('#response').html('Ваши данные хранятся <br>  в файле feedbackform.'+ result.typefile);
+        url: "post.php",
+        data: formData,
+        async: false,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+            alert(data);
         }
     });
-}
+    return false;
+})
 

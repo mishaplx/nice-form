@@ -15,8 +15,8 @@
 
     <div class="login-box">
         <h1>feedback form</h1>
-        <form action="" class="form__textbox" method="POST" id="ajax_form">
-            <div class="textbox">
+        <form action="" class="form__textbox" method="POST" id="upload_form" enctype="multipart/form-data">
+           <div class="textbox">
                 <input type="text" name="name" class="inp" placeholder="Введите Имя">
             </div>
             <div class="textbox">
@@ -26,24 +26,29 @@
                 <input type="email" name="email" class="inp" placeholder="Введите Email">
             </div>
             <div class="textbox">
-                <input type="text" name="phone" class="inp" placeholder="+375(XX)-XXX-XX-XX">
+                <input type="text" name="phone" class="inp" id="phone" placeholder="+375(XX)-XXX-XX-XX">
             </div>
             <div class="textbox">
                 <input type="text" name="typefile" class="inp" placeholder="тип файла">
             </div>
-            <input type="button" name="" class="btn" id="btn" value="Отправить">
+            <div class="textbox">
+                <input type="file" name="filename"  id="filename" class="inp"">
+            </div>
+            <input type="submit" name="" class="btn" id="btn" value="Отправить">
         </form>
     </div>
-    <div class="result">
-        <div id="result_form"></div>
-    </div>
-  
-    <div id="response"></div>
+
+    <div id="result"></div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
     <script src="./js/ajax.js"></script>
 
 </body>
 
 </html>
+
+
+
+
+
+ 

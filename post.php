@@ -1,25 +1,20 @@
 <?php
-// $name = $_POST['name'];
-// $surname = $_POST['surname'];
-// $email = $_POST['email'];
-// $phone = $_POST['phone'];
-if (isset($_POST["name"]) && isset($_POST["surname"]) && isset($_POST["email"]) && isset($_POST["phone"]) && isset($_POST["typefile"])) {
-
-    
-    $result = array(
-        'name' => $_POST["name"],
-        'surname' => $_POST["surname"],
-        'email' => $_POST["email"],
-        'phone' => $_POST["phone"],
-        'typefile' => $_POST["typefile"],
-    );
-
-$name_file = "{$_SERVER['DOCUMENT_ROOT']}/form_upload/feedbackform.{$result['typefile']}";
-    $file = fopen($name_file,'w');
-    fwrite($file,$result['name']);
-    fwrite($file,$result['surname']);
-    fwrite($file,$result['email']);
-    fwrite($file,$result['phone']);
-    fclose($file);
-    echo json_encode($result);
+mkdir("{$_SERVER['DOCUMENT_ROOT']}/form_upload",0777);
+if ($_FILES && $_FILES["filename"]["error"]== UPLOAD_ERR_OK)
+{
+    $name = "form_upload/" . $_FILES["filename"]["name"];;
+    move_uploaded_file($_FILES["filename"]["tmp_name"], $name);
+    echo "Форма с файлом загружена на сервер";
 }
+
+
+$name_file = "{$_SERVER['DOCUMENT_ROOT']}/form_upload/feedbackform.{$_POST["typefile"]}";
+    $file = fopen($name_file,'w');
+    fwrite($file,"Имя - " . $_POST["name"]. "\n");
+    fwrite($file,"Фамилия - " . $_POST["surname"]. "\n");
+    fwrite($file,"Почта - " . $_POST["email"]. "\n");
+    fwrite($file,"Номер телефона - " . $_POST["phone"]. "\n");
+    fwrite($file,"Тип файла в котором будут записанны данные из формы - " . $_POST["typefile"]. "\n");
+    fclose($file);
+
+
